@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 import App from "./App";
-import { shallow } from "enzyme";
-import renderer from "react-test-renderer";
+import { configureStore } from "./store";
 
-it("renders without crashing", () => {
-  shallow(<App />);
-});
+const store = configureStore(window.__INITIAL_STATE__);
 
-test("renders correctly", () => {
-  const tree = renderer.create(<App />).toJSON();
-  expect(tree).toMatchSnapshot();
+it("App renders without crashing", () => {
+  const div = document.createElement("div");
+  ReactDOM.render(<App store={store} />, div);
+  ReactDOM.unmountComponentAtNode(div);
 });

@@ -1,15 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
+import { render } from "react-dom";
+
+import { configureStore } from "./store";
 import App from "./App";
-import * as serviceWorker from "./serviceWorker";
-import { initGTM } from "./utils/GoogleTagManagerService";
+import { unregister } from "./serviceWorker";
 
-initGTM();
+import "./index.css";
+declare global {
+  interface Window {
+    __INITIAL_STATE__: any;
+  }
+}
 
-ReactDOM.render(<App />, document.getElementById("root"));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const store = configureStore(window.__INITIAL_STATE__);
+render(<App store={store} />, document.getElementById("root"));
+unregister();
