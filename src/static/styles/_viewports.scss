@@ -1,0 +1,10 @@
+/* Viewport Sizes */
+$desktop-less: "screen and (max-width : 1010px)";
+$desktop: "screen and (min-width: 1010px)";
+$tablet-less: "screen and (max-width : 767px)";
+$tablet: "screen and (min-width : 768px)";
+$wide-screen: "screen and (min-width: 1180px)";
+
+/* Rotation */
+$landscape: "(orientation: landscape)";
+$portrait: "(orientation: portrait)";

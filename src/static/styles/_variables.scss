@@ -1,0 +1,89 @@
+/* COLORS */
+$bg-gray: #e4e5ea;
+$black: #000000;
+$black01: #26252a;
+$blue-light: #006aac;
+$blue-lighter: #93bfd9;
+$blue-drak: #054268;
+$blue01: #58acdc;
+$blue02: #006fae;
+$blue03: #415eae;
+$blue04: #0065a8;
+$blue05: #0054a0;
+$blue06: #415dae;
+$blue07: #016aac;
+$blue09: #1ca0f3;
+$blue10: #006eae;
+$blue11: #85cfff;
+$blue: #005a93;
+$border-color: #d0d2d9;
+$color: #6f6e7d;
+$google: #ea4335;
+$gray: #626473;
+$gray01: #959595;
+$gray02: #d6d8de;
+$gray03: #7e818e;
+$gray04: #40424a;
+$gray05: #818181;
+$gray06: #cfd2d9;
+$gray07: #f4f5f7;
+$gray08: #e6e6e6;
+$gray09: #7f7f7f;
+$gray10: #bdbdbf;
+$gray11: #e8e8e8;
+$gray12: #333333;
+$gray13: #484949;
+$gray14: #e2e2e2;
+$light-gray: #f6f6f6;
+$lighter-gray: #e5e5e5;
+$dark-gray: #707070;
+$darker-gray: #737373;
+$opac-gray: rgba(205, 205, 205, 0.5);
+$red: #cb0000;
+$red-drak: #830000;
+$maroon: #a92116;
+$pink: #f4d5d5;
+$steps-color: #d0d2d9;
+$white: #ffffff;
+$yellow-drak: #e2991f;
+$yellow: #f6ac31;
+$green: #6ad674;
+
+/* FONTS */
+$base-text-color: $black;
+$base-text-size: 14px;
+$primary-font: "Roboto", sans-serif;
+$secondary-font: "Montserrat", sans-serif;
+
+/* Font Sizes for Hotels */
+$font-size-xxxlarge: 24px;
+$font-size-xxlarge: 21px;
+$font-size-xlarge: 20px;
+$font-size-large: 16px;
+$font-size-normal: 12px;
+$font-size-medium: 14px;
+$font-size-small: 10px;
+
+/* Font weight */
+$font-weight-light: 300;
+$font-weight-bold: 500;
+
+/* mixin that let you change placeholder font color. */
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: $color;
+  }
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: $color;
+  }
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: $color;
+  }
+}

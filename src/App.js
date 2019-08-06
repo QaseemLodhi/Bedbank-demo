@@ -2,6 +2,8 @@ import React, { PureComponent } from "react";
 import { Provider } from "react-redux";
 import PropTypes from "prop-types";
 
+import BedBanks from "./modules/BedBanks/BedBanks";
+import { ThemeProvider } from "./static/themes/themes";
 import initializeLibraries from "./util/libInitializer";
 
 import "./App.css";
@@ -14,7 +16,9 @@ export default class App extends PureComponent {
   render() {
     return (
       <Provider store={this.props.store}>
-        <div>hello world</div>
+        <ThemeProvider>
+          <BedBanks />
+        </ThemeProvider>
       </Provider>
     );
   }
